@@ -4,13 +4,14 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "koa": "node ./server/index.js"
+    "koa": "nodemon ./server/index.js"
   },
   "dependencies": {
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
     "koa-jwt": "^4.0.1",
+    "koa-logger": "^3.2.1",
     "koa-router": "^10.0.0",
     "koa2-cors": "^2.0.6",
     "mongoose": "^5.12.14",
@@ -20,6 +21,7 @@
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",
     "typescript": "^4.3.2",
+    "nodemon": "^2.0.9",
     "vite": "^2.3.7",
     "vue-tsc": "^0.0.24"
   }

@@ -11,6 +11,9 @@ router
   .get("/", async (ctx) => {
     ctx.body = "hellow koa";
   })
+  .get("/test", async (ctx) => {
+    ctx.body = "test1";
+  })
   .get("/api/login", async (ctx, next) => {
     let userToken = {
       name: "nicchan",
