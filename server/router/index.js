@@ -1,7 +1,8 @@
 const Router = require("koa-router");
+const jwt = require("jsonwebtoken");
+
 const verify = require("../middleware/verify");
 const ApiError = require("../error/index");
-const jwt = require("jsonwebtoken");
 
 const { JWT_CONFIG } = require("../config");
 
@@ -9,10 +10,13 @@ const router = new Router();
 
 router
   .get("/", async (ctx) => {
-    ctx.body = "hellow koa";
+    await ctx.render("index");
   })
   .get("/test", async (ctx) => {
     ctx.body = "test1";
+  })
+  .get("/test/getlist", async (ctx) => {
+    ctx.body = "getlist";
   })
   .get("/api/login", async (ctx, next) => {
     let userToken = {
